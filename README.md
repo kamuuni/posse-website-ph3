@@ -1,133 +1,225 @@
-# Laravel インストール方法
-1. `docker compose build --no-cache` (ビルドする)
-2. `docker compose up -d` (コンテナをたてる)
-3. `docker compose exec app sh` (appコンテナに入る)
-4. `composer create-project --prefer-dist laravel/laravel . "10.*"` (src配下にLaravel10をインストール)
-5. ブラウザで `http://localhost` にアクセスし、Laravelのロゴ入りのトップページが表示されることを確認
+# 🎯 Interactive Quiz Platform
 
-<img width="1446" alt="スクリーンショット 2023-06-09 19 39 34" src="https://github.com/posse-ap/template-ph3-website/assets/33271639/69d42fe3-4e3a-4087-91a9-c55640a2671f">
+**Laravel 10 + Docker による本格的なクイズWebアプリケーション**
 
+エンタープライズレベルのPHPフレームワークLaravelと最新のフロントエンド技術を組み合わせて構築した、インタラクティブなクイズプラットフォームです。ユーザー認証、管理者機能、リアルタイムクイズ実行機能を備えた実用的なWebアプリケーションです。
 
-# データベースの作成
-1. appコンテナに入っていることを確認
-    - (入っていなければ、`docker compose exec app sh`)
-2. `src > .env` の内容を以下のように書き換える
-    ```
-    DB_CONNECTION=mysql
-    DB_HOST=mysql
-    DB_PORT=3306
-    DB_DATABASE=website
-    DB_USERNAME=posse
-    DB_PASSWORD=password
-    ```
+## ✨ 主な機能
 
-    <details>
-        <summary> .envのファイル全チェック用 (開閉してチェックしてください)</summary>
-        以下.envの内容 (APP_KEYは全員違う値になります)
-    
-        ```
-            APP_NAME=Laravel
-            APP_ENV=local
-            APP_KEY=base64:KLUF4cs983/ayoMuNMhObi+nV0iRZdxVoPWtD/M9fdM=
-            APP_DEBUG=true
-            APP_URL=http://localhost
+### 🔐 認証・認可システム
+- **Laravel Breeze** による完全な認証フロー（登録・ログイン・パスワードリセット・メール認証）
+- **カスタム管理者権限システム** - 独自ミドルウェアによる柔軟な権限制御
+- **セキュアなセッション管理** - CSRF保護、パスワードハッシング
 
-            LOG_CHANNEL=stack
-            LOG_DEPRECATIONS_CHANNEL=null
-            LOG_LEVEL=debug
+### 🎮 インタラクティブクイズ機能
+- **リアルタイム3択クイズ** - JavaScript による即座の正誤判定
+- **スコア集計システム** - 全問終了後の結果表示
+- **視覚的フィードバック** - 正解・不正解の色分け表示
+- **補足情報表示** - 問題に関する追加説明機能
 
-            DB_CONNECTION=mysql
-            DB_HOST=mysql
-            DB_PORT=3306
-            DB_DATABASE=website
-            DB_USERNAME=posse
-            DB_PASSWORD=password
+### 👨‍💼 管理者機能
+- **クイズ管理CRUD** - 作成・編集・削除の完全な管理機能
+- **トランザクション処理** - 複雑なデータ関係の安全な一括作成
+- **管理者ダッシュボード** - 統計情報とシステム管理
+- **権限ベースアクセス制御** - 管理者のみアクセス可能な保護されたルート
 
-            BROADCAST_DRIVER=log
-            CACHE_DRIVER=file
-            FILESYSTEM_DISK=local
-            QUEUE_CONNECTION=sync
-            SESSION_DRIVER=file
-            SESSION_LIFETIME=120
+### 🎨 フロントエンド技術
+- **Tailwind CSS 3** - カスタムデザインシステム
+- **レスポンシブデザイン** - モバイル・タブレット・デスクトップ対応
+- **カスタムアニメーション** - fade-in、slide-up等のスムーズな動作
+- **多言語フォント対応** - Inter、Poppins、Noto Sans JP
 
-            MEMCACHED_HOST=127.0.0.1
+## 🛠️ 技術スタック
 
-            REDIS_HOST=127.0.0.1
-            REDIS_PASSWORD=null
-            REDIS_PORT=6379
+### バックエンド
+- **Laravel 10** - PHP 8.1+
+- **MySQL 8.0** - リレーショナルデータベース
+- **Laravel Sanctum** - API認証
+- **Pest** - 次世代テストフレームワーク
 
-            MAIL_MAILER=smtp
-            MAIL_HOST=mailpit
-            MAIL_PORT=1025
-            MAIL_USERNAME=null
-            MAIL_PASSWORD=null
-            MAIL_ENCRYPTION=null
-            MAIL_FROM_ADDRESS="hello@example.com"
-            MAIL_FROM_NAME="${APP_NAME}"
+### フロントエンド
+- **Vite** - 高速ビルドツール
+- **Tailwind CSS 3** - ユーティリティファーストCSS
+- **Alpine.js** - 軽量リアクティブフレームワーク
+- **jQuery + Slick Carousel** - インタラクティブ要素
 
-            AWS_ACCESS_KEY_ID=
-            AWS_SECRET_ACCESS_KEY=
-            AWS_DEFAULT_REGION=us-east-1
-            AWS_BUCKET=
-            AWS_USE_PATH_STYLE_ENDPOINT=false
+### インフラ・開発環境
+- **Docker Compose** - マルチコンテナ開発環境
+- **Nginx** - 高性能Webサーバー
+- **phpMyAdmin** - データベース管理ツール
+- **Node.js 18** - フロントエンドビルド環境
 
-            PUSHER_APP_ID=
-            PUSHER_APP_KEY=
-            PUSHER_APP_SECRET=
-            PUSHER_HOST=
-            PUSHER_PORT=443
-            PUSHER_SCHEME=https
-            PUSHER_APP_CLUSTER=mt1
+## 🏗️ アーキテクチャ
 
-            VITE_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
-            VITE_PUSHER_HOST="${PUSHER_HOST}"
-            VITE_PUSHER_PORT="${PUSHER_PORT}"
-            VITE_PUSHER_SCHEME="${PUSHER_SCHEME}"
-            VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+### データベース設計
+```
+users (認証 + 管理者フラグ)
+├── id, name, email, password, is_admin, email_verified_at
+│
+quizzes (クイズセット)
+├── id, name, created_at, updated_at
+│
+questions (設問)
+├── id, quiz_id, text, image, supplement
+│
+choices (選択肢)
+├── id, question_id, text, is_correct
+```
 
-        ```
-    </details>
+### Docker構成
+- **app**: PHP 8.1 + Laravel実行環境
+- **node**: Node.js 18 フロントエンドビルド
+- **web**: Nginx Webサーバー
+- **mysql**: MySQL 8.0 データベース
+- **phpmyadmin**: DB管理インターフェース
 
-3. `php artisan migrate` をして、以下のように出力されていれば成功
-    ```shell
-    2014_10_12_000000_create_users_table ........................................ 274ms DONE
-    2014_10_12_100000_create_password_reset_tokens_table ........................ 196ms DONE
-    2019_08_19_000000_create_failed_jobs_table .................................. 116ms DONE
-    2019_12_14_000001_create_personal_access_tokens_table ....................... 196ms DONE
-    ```
+## 🚀 セットアップ & 起動
 
-# Breeze インストール方法 PHP側
-1. appコンテナに入っていることを確認
-    - (入っていなければ、`docker compose exec app sh`)
-2. `composer require laravel/breeze --dev`
-3. `php artisan breeze:install` を入力し、選択肢は以下の通り
-    - `Which stack would you like to install?` : 0 (blade)
-    - `Would you like to install dark mode support?` : no
-    - `Would you prefer Pest tests instead of PHPUnit?` : no
+### 1. 環境構築
+```bash
+# リポジトリクローン
+git clone <repository-url>
+cd quiz-platform
 
-<img width="1054" alt="breeze install php" src="https://github.com/posse-ap/template-ph3-website/assets/33271639/fdc2377a-df2a-486d-83f4-2232b40151e2">
+# Docker環境構築
+docker compose build --no-cache
+docker compose up -d
+```
 
+### 2. Laravel セットアップ
+```bash
+# アプリケーションコンテナに入る
+docker compose exec app sh
 
-# Breeze インストール方法 NODE側
+# 依存関係インストール
+composer install
 
-1. `src/package.json` の内容のscripts部分を以下のように変更する
-    - 変更点としてはdevの`"vite"`のみだったのが `"vite --host"` というhostオプションを付け足しています
-    ```json
-        "scripts": {
-            "dev": "vite --host",
-            "build": "vite build"
-    },
-    ```
+# 環境設定
+cp .env.example .env
+php artisan key:generate
 
-2. nodeコンテナに入っていることを確認
-   - (入っていなければ、`docker compose exec node sh`)
-3. `npm install`
-4. `npm run dev` or `npm run build`
-    - buildは現時点のファイルを読み込んでファイルを生成します (build後にtailwindのクラス名を追加した場合は再度buildが必要です)
-    - devは変更点をずっと監視しつづけるのでスペックがギリギリだとパソコンに負荷がかかるかもなので、見た目の編集しないときはbuildを利用してください
+# データベースマイグレーション
+php artisan migrate
 
-# # Breeze インストール方法 画面確認
-1. トップページの右上に `Log in` `Register` が表示されていることを確認
-2. `Log in` を押すとフォームが正常に表示されていること
+# シーダー実行（サンプルデータ）
+php artisan db:seed
+```
 
-<img width="1020" alt="ログイン画面" src="https://github.com/posse-ap/template-ph3-website/assets/33271639/45729c65-e442-43a4-abff-1ad4240ba5fe">
+### 3. フロントエンド セットアップ
+```bash
+# Node.jsコンテナに入る
+docker compose exec node sh
+
+# 依存関係インストール
+npm install
+
+# 開発用ビルド（ホットリロード）
+npm run dev
+
+# または本番用ビルド
+npm run build
+```
+
+### 4. アクセス確認
+- **メインサイト**: http://localhost
+- **phpMyAdmin**: http://localhost:1234
+- **Vite開発サーバー**: http://localhost:5173
+
+## 📱 主要ページ
+
+| ページ | URL | 説明 |
+|--------|-----|------|
+| ホーム | `/` | ランディングページ |
+| クイズ一覧 | `/quizzes` | 利用可能なクイズ表示 |
+| クイズ実行 | `/quizzes/{id}` | インタラクティブクイズ |
+| プロフィール | `/profile` | ユーザー情報管理 |
+| 管理者ダッシュボード | `/admin/dashboard` | 管理者専用ページ |
+| クイズ管理 | `/admin/quizzes` | CRUD操作 |
+
+## 🔧 開発のポイント
+
+### エンタープライズレベルの実装
+```php
+// 管理者権限チェック
+class EnsureUserIsAdmin
+{
+    public function handle(Request $request, Closure $next): Response
+    {
+        if (auth()->check() && auth()->user()->is_admin) {
+            return $next($request);
+        }
+        abort(403, '管理者権限が必要です。');
+    }
+}
+```
+
+### インタラクティブなフロントエンド
+```javascript
+// リアルタイムクイズ機能
+document.querySelectorAll('.choice-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const isCorrect = this.dataset.isCorrect === 'true';
+        // 即座の正誤判定とUI更新
+        updateQuizUI(isCorrect);
+    });
+});
+```
+
+### 最新フロントエンド技術
+```javascript
+// カスタムカラーパレット
+colors: {
+    primary_main: '#197fc3',
+    primary_gray: '#B0B0B0',
+    primary_lighter: '#EAF2FF',
+    // ...
+}
+```
+
+## 🧪 テスト
+
+```bash
+# 全テスト実行
+php artisan test
+
+# 特定テスト実行
+php artisan test --filter=QuizTest
+
+# カバレッジ付きテスト
+php artisan test --coverage
+```
+
+## 📈 パフォーマンス最適化
+
+- **Eager Loading**: N+1問題の回避
+- **ページネーション**: 大量データの効率的表示
+- **Vite**: 高速バンドルとホットリロード
+- **CSS最適化**: Tailwind JITコンパイル
+
+## 🔒 セキュリティ機能
+
+- CSRF保護（Laravel標準）
+- SQL インジェクション対策（Eloquent ORM）
+- XSS対策（Blade テンプレート）
+- 認証フロー（Laravel Breeze）
+- 権限ベースアクセス制御
+
+## 🎯 今後の拡張予定
+
+- [ ] クイズカテゴリ機能
+- [ ] ユーザーランキングシステム
+- [ ] 画像アップロード機能
+- [ ] API エンドポイント
+- [ ] リアルタイム通知
+
+## 📄 ライセンス
+
+MIT License
+
+## 🤝 コントリビューション
+
+プルリクエストやイシューの報告を歓迎します。開発に参加される場合は、まずイシューを作成してディスカッションしてください。
+
+---
+
+**技術スタック**: Laravel 10 | PHP 8.1 | MySQL 8.0 | Docker | Tailwind CSS | Vite | Alpine.js

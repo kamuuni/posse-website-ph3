@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Adjust scroll position for fixed header */
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+/* Custom slider styles */
+.animate-slide:hover {
+    animation-play-state: paused;
+}
+
+/* Custom validation styles */
+.custom-validation-error {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hide browser default validation tooltips */
+input:invalid {
+    box-shadow: none;
+}
+
+input:invalid:focus {
+    box-shadow: none;
+}

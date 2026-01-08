@@ -1,10 +1,14 @@
-FROM php:8.1.17-fpm-alpine3.17
+FROM php:8.2-fpm-alpine3.19
+RUN apk update && apk upgrade
 COPY php.ini /usr/local/etc/php/
+
+RUN apk add --update nodejs npm
 
 # 必要なパッケージをインストール
 RUN apk add --no-cache \
   libzip-dev \
   zlib-dev \
+  linux-headers \
   mariadb-client \
   unzip \
   curl \

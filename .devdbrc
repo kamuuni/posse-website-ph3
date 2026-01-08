@@ -1,0 +1,7 @@
+[
+    {
+        "name": "Laravel SQLite (src)",
+        "type": "sqlite",
+        "path": "/home/kaika/workspace/posse-website-ph3/src/database/database.sqlite"
+    }
+]
