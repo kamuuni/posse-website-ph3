@@ -12,13 +12,13 @@
 
         {{-- ここで共通のJS（app.js）と、今回のクイズ用JSなどを読み込む --}}
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-        
+
         {{-- 予約席：特定のページだけで使いたいJSをここに流し込む --}}
         @stack('scripts')
     </head>
-    <body class="font-sans antialiased bg-gray-900 text-white"> {{-- 管理者っぽく背景をダークにする例 --}}
+    <body class="font-sans antialiased bg-gray-900 text-white"> {{-- 管理者っぽい背景 --}}
         <div class="min-h-screen flex">
-            {{-- ここに管理者専用のサイドバーとかを入れてもいいですね --}}
+            {{-- 管理者専用のサイドバー --}}
             <aside class="w-64 bg-gray-800 shadow-md">
                 <div class="p-6 text-xl font-bold">Admin Dashboard</div>
                 <nav class="mt-4">
@@ -27,6 +27,15 @@
             </aside>
 
             <div class="flex-1">
+
+                @if (isset($header))
+                    <header class="bg-gray-900 shadow sticky top-0">
+                        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                            {{ $header }}
+                        </div>
+                    </header>
+                @endif
+
                 <main class="p-8">
                     {{ $slot }}
                 </main>
