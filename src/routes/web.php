@@ -6,6 +6,11 @@ use App\Http\Controllers\QuizController;
 use App\Http\Middleware\EnsureUserIsAdmin;
 use App\Http\Controllers\Admin\QuizController as AdminQuizController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\PostController as AdminPostController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\CommentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +35,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/quizzes', [QuizController::class, 'index'])->name('quizzes.index');
     Route::get('/quizzes/{quiz}', [QuizController::class, 'show'])->name('quizzes.show');
+    Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+    Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+    Route::post('posts/{post}/comments', [CommentController::class, 'store'])->name('comments.store');
 });
 
 // 'auth'（ログイン済み）かつ 'admin'（管理者フラグあり）の二重チェック
@@ -37,10 +45,16 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 
     Route::resource('quizzes', AdminQuizController::class);
 
-    
+
     Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
-    // ここにクイズの作成画面などを追加していく
+    Route::resource('posts', AdminPostController::class);
+
+    Route::get('users', [UserController::class, 'index'])->name('users.index');
+
+    Route::delete('users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+
 });
+
 
 require __DIR__.'/auth.php';
