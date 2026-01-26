@@ -34,49 +34,45 @@
         </section>
         <!-- Hero Section End -->
 
-        <!-- Image Gallery Section -->
         <section class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="overflow-hidden">
                     <div id="sliderContent" class="flex gap-4 md:gap-6 pb-4 animate-slide">
-                        <!-- First set of images -->
-                        <img src="http://localhost/images/slide-01.png" 
-                             alt="POSSEの活動風景1" 
-                             class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="http://localhost/images/slide-02.png" 
-                             alt="POSSEの活動風景2" 
-                             class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="http://localhost/images/slide-03.png" 
-                             alt="POSSEの活動風景3" 
-                             class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="http://localhost/images/slide-04.png" 
-                             alt="POSSEの活動風景4" 
-                             class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="http://localhost/images/slide-05.png" 
-                             alt="POSSEの活動風景5" 
-                             class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        
-                        <!-- Duplicate set for infinite loop -->
-                        <img src="http://localhost/images/slide-01.png" 
-                             alt="POSSEの活動風景1" 
-                             class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="http://localhost/images/slide-02.png" 
-                             alt="POSSEの活動風景2" 
-                             class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="http://localhost/images/slide-03.png" 
-                             alt="POSSEの活動風景3" 
-                             class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="http://localhost/images/slide-04.png" 
-                             alt="POSSEの活動風景4" 
-                             class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
-                        <img src="http://localhost/images/slide-05.png" 
-                             alt="POSSEの活動風景5" 
-                             class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ asset('images/slide-01.png') }}"
+                            alt="POSSEの活動風景1"
+                            class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ asset('images/slide-02.png') }}"
+                            alt="POSSEの活動風景2"
+                            class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ asset('images/slide-03.png') }}"
+                            alt="POSSEの活動風景3"
+                            class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ asset('images/slide-04.png') }}"
+                            alt="POSSEの活動風景4"
+                            class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ asset('images/slide-05.png') }}"
+                            alt="POSSEの活動風景5"
+                            class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
+
+                        <img src="{{ asset('images/slide-01.png') }}"
+                            alt="POSSEの活動風景1"
+                            class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ asset('images/slide-02.png') }}"
+                            alt="POSSEの活動風景2"
+                            class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ asset('images/slide-03.png') }}"
+                            alt="POSSEの活動風景3"
+                            class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ asset('images/slide-04.png') }}"
+                            alt="POSSEの活動風景4"
+                            class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="{{ asset('images/slide-05.png') }}"
+                            alt="POSSEの活動風景5"
+                            class="flex-shrink-0 w-40 md:w-48 lg:w-56 h-28 md:h-36 lg:h-40 rounded-xl md:rounded-2xl object-cover shadow-lg hover:shadow-xl transition-shadow duration-300">
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Image Gallery Section End -->
 
         <!-- About Us Section -->
         <section id="about-us" class="relative py-16 md:py-24 bg-white">
@@ -87,7 +83,7 @@
                         POSSE
                     </p>
                 </div>
-                
+
                 <!-- Content -->
                 <div class="relative z-10 max-w-2xl">
                     <h2 class="font-Poppins text-3xl md:text-4xl lg:text-5xl font-bold text-primary_main mb-4 tracking-tight">
@@ -116,8 +112,8 @@
                     <div class="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
                         <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                             <div class="flex-shrink-0">
-                                <img src="{{ asset('images/news-aws.png') }}" 
-                                     class="w-64 md:w-80 lg:w-96 h-auto object-contain rounded-xl" 
+                                <img src="{{ asset('images/news-aws.png') }}"
+                                     class="w-64 md:w-80 lg:w-96 h-auto object-contain rounded-xl"
                                      alt="AWS Startupブログ掲載記事のイメージ">
                             </div>
                             <div class="flex-1 text-left">
@@ -125,8 +121,8 @@
                                     POSSEについての記事を<br>AWS Startupブログに掲載いただきました！
                                 </h3>
                                 <div class="flex justify-start">
-                                    <a href="https://aws.amazon.com/jp/blogs/startup/posse-community-interview-2025/" 
-                                       target="_blank" 
+                                    <a href="https://aws.amazon.com/jp/blogs/startup/posse-community-interview-2025/"
+                                       target="_blank"
                                        rel="noopener noreferrer"
                                        class="inline-flex items-center gap-2 bg-primary_main hover:bg-primary_main/90 text-white px-6 py-3 rounded-full text-sm font-Inter font-semibold transition-all duration-300 shadow-md hover:shadow-lg">
                                         <span>AWS公式サイトで見る</span>
@@ -154,7 +150,7 @@
                         メンバーの構成
                     </p>
                 </div>
-                
+
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-6 max-w-6xl mx-auto">
                     <!-- Gender Statistics -->
                     <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative">
@@ -169,14 +165,14 @@
                                 <p class="font-Poppins text-2xl md:text-3xl font-bold text-primary_gray">
                                     女性<span class="text-4xl md:text-5xl ml-1">4</span><span class="text-xl">割</span>
                                 </p>
-                                <img src="{{ asset('images/configuration_up.png') }}" 
-                                     width="31" height="29" 
-                                     alt="上昇トレンドアイコン" 
+                                <img src="{{ asset('images/configuration_up.png') }}"
+                                     width="31" height="29"
+                                     alt="上昇トレンドアイコン"
                                      class="flex-shrink-0">
                             </div>
-                            <img src="{{ asset('images/configuration_sex.png') }}" 
-                                 width="216" height="76" 
-                                 alt="性別構成グラフ" 
+                            <img src="{{ asset('images/configuration_sex.png') }}"
+                                 width="216" height="76"
+                                 alt="性別構成グラフ"
                                  class="mx-auto max-w-full h-auto">
                         </div>
                     </div>
@@ -192,13 +188,13 @@
                             <p class="font-Inter text-primary_main font-medium mb-2">プログラミングだけど</p>
                             <div class="flex items-center justify-center gap-2 mb-6">
                                 <p class="font-Poppins text-2xl md:text-3xl font-bold text-primary_gray">文系が多い</p>
-                                <img src="{{ asset('images/configuration_up.png') }}" 
-                                     width="31" height="29" 
-                                     alt="上昇トレンドアイコン" 
+                                <img src="{{ asset('images/configuration_up.png') }}"
+                                     width="31" height="29"
+                                     alt="上昇トレンドアイコン"
                                      class="flex-shrink-0">
                             </div>
-                            <img src="{{ asset('images/configuration-bar-chart.svg') }}" 
-                                 alt="学部別構成バーチャート" 
+                            <img src="{{ asset('images/configuration-bar-chart.svg') }}"
+                                 alt="学部別構成バーチャート"
                                  class="mx-auto max-w-full h-auto">
                         </div>
                     </div>
@@ -216,8 +212,8 @@
                                     早稲田 慶應 明治 <span class="text-base font-medium">が大多数</span>
                                 </p>
                             </div>
-                            <img src="{{ asset('images/configuration-donut-chart.svg') }}" 
-                                 alt="大学別構成ドーナツチャート" 
+                            <img src="{{ asset('images/configuration-donut-chart.svg') }}"
+                                 alt="大学別構成ドーナツチャート"
                                  class="mx-auto max-w-full h-auto">
                         </div>
                     </div>
@@ -234,7 +230,7 @@
                         POSSEの目指すところ
                     </h2>
                 </div>
-                
+
                 <div class="grid grid-cols-1 xl:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto mb-12">
                     <!-- Goal 1 -->
                     <div class="bg-gradient-to-r from-primary_main to-blue-600 rounded-2xl p-6 md:p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
@@ -260,7 +256,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Community Focus -->
                 <div class="text-center max-w-4xl mx-auto">
                     <p class="font-Inter text-primary_main text-base md:text-lg lg:text-xl font-semibold mb-2">
@@ -275,7 +271,7 @@
                     </p>
                 </div>
             </div>
-            
+
             <!-- Decorative bottom border -->
             <div class="absolute bottom-0 left-0 w-full">
                 <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-12 md:h-20 fill-white">
@@ -298,14 +294,14 @@
                         学習の流れ
                     </p>
                 </div>
-                
+
                 <div class="max-w-6xl mx-auto">
                     <div class="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-6 md:p-12 shadow-lg">
-                        <img src="{{ asset('images/flow-of-learning.svg') }}" 
-                             alt="学習の流れ図" 
+                        <img src="{{ asset('images/flow-of-learning.svg') }}"
+                             alt="学習の流れ図"
                              class="mx-auto object-contain lg:block hidden max-w-full h-auto">
-                        <img src="{{ asset('images/flow-of-learning-sp.svg') }}" 
-                             alt="学習の流れ図（スマートフォン版）" 
+                        <img src="{{ asset('images/flow-of-learning-sp.svg') }}"
+                             alt="学習の流れ図（スマートフォン版）"
                              class="mx-auto object-contain lg:hidden block max-w-full h-auto">
                     </div>
                 </div>
@@ -324,7 +320,7 @@
                         POSSEの特徴
                     </p>
                 </div>
-                
+
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
                     <!-- Feature 1 -->
                     <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
@@ -372,7 +368,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Decorative bottom border -->
             <div class="absolute bottom-0 left-0 w-full">
                 <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="w-full h-12 md:h-20 fill-white">
@@ -399,8 +395,8 @@
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-8">
                     <!-- 5月 -->
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/yearly-schedule-may.webp') }}" 
-                             alt="入学式" 
+                        <img src="{{ asset('images/yearly-schedule-may.webp') }}"
+                             alt="入学式"
                              class="w-full h-24 md:h-32 lg:h-40 object-cover rounded-lg mb-2 shadow-md">
                         <div class="font-Poppins text-2xl md:text-3xl font-bold text-bubble_blue mb-1">
                             5<span class="text-base md:text-lg">月</span>
@@ -410,8 +406,8 @@
 
                     <!-- 6月 -->
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/yearly-schedule-june.webp') }}" 
-                             alt="新人ハッカソン/夏のレクリエーション" 
+                        <img src="{{ asset('images/yearly-schedule-june.webp') }}"
+                             alt="新人ハッカソン/夏のレクリエーション"
                              class="w-full h-24 md:h-32 lg:h-40 object-cover rounded-lg mb-2 shadow-md">
                         <div class="font-Poppins text-2xl md:text-3xl font-bold text-bubble_blue mb-1">
                             6<span class="text-base md:text-lg">月</span>
@@ -422,8 +418,8 @@
 
                     <!-- 7月 -->
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/yearly-schedule-july.webp') }}" 
-                             alt="カリキュラム巻き返しweek" 
+                        <img src="{{ asset('images/yearly-schedule-july.webp') }}"
+                             alt="カリキュラム巻き返しweek"
                              class="w-full h-24 md:h-32 lg:h-40 object-cover rounded-lg mb-2 shadow-md">
                         <div class="font-Poppins text-2xl md:text-3xl font-bold text-bubble_blue mb-1">
                             7<span class="text-base md:text-lg">月</span>
@@ -434,8 +430,8 @@
 
                     <!-- 8月 -->
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/yearly-schedule-august.webp') }}" 
-                             alt="カリキュラム巻き返しweek/プログラミングイベント（3泊4日）" 
+                        <img src="{{ asset('images/yearly-schedule-august.webp') }}"
+                             alt="カリキュラム巻き返しweek/プログラミングイベント（3泊4日）"
                              class="w-full h-24 md:h-32 lg:h-40 object-cover rounded-lg mb-2 shadow-md">
                         <div class="font-Poppins text-2xl md:text-3xl font-bold text-bubble_blue mb-1">
                             8<span class="text-base md:text-lg">月</span>
@@ -448,8 +444,8 @@
 
                     <!-- 9月 -->
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/yearly-schedule-september.webp') }}" 
-                             alt="新歓イベント/卒業制作最終発表" 
+                        <img src="{{ asset('images/yearly-schedule-september.webp') }}"
+                             alt="新歓イベント/卒業制作最終発表"
                              class="w-full h-24 md:h-32 lg:h-40 object-cover rounded-lg mb-2 shadow-md">
                         <div class="font-Poppins text-2xl md:text-3xl font-bold text-bubble_blue mb-1">
                             9<span class="text-base md:text-lg">月</span>
@@ -460,8 +456,8 @@
 
                     <!-- 10月 -->
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/yearly-schedule-october.webp') }}" 
-                             alt="カリキュラム巻き返しweek/後期入学式" 
+                        <img src="{{ asset('images/yearly-schedule-october.webp') }}"
+                             alt="カリキュラム巻き返しweek/後期入学式"
                              class="w-full h-24 md:h-32 lg:h-40 object-cover rounded-lg mb-2 shadow-md">
                         <div class="font-Poppins text-2xl md:text-3xl font-bold text-bubble_blue mb-1">
                             10<span class="text-base md:text-lg">月</span>
@@ -476,8 +472,8 @@
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto">
                     <!-- 11月 -->
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/yearly-schedule-november.webp') }}" 
-                             alt="後期入学者新人ハッカソン" 
+                        <img src="{{ asset('images/yearly-schedule-november.webp') }}"
+                             alt="後期入学者新人ハッカソン"
                              class="w-full h-24 md:h-32 lg:h-40 object-cover rounded-lg mb-2 shadow-md">
                         <div class="font-Poppins text-2xl md:text-3xl font-bold text-bubble_blue mb-1">
                             11<span class="text-base md:text-lg">月</span>
@@ -488,8 +484,8 @@
 
                     <!-- 12月 -->
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/yearly-schedule-december.webp') }}" 
-                             alt="カリキュラム巻き返しweek" 
+                        <img src="{{ asset('images/yearly-schedule-december.webp') }}"
+                             alt="カリキュラム巻き返しweek"
                              class="w-full h-24 md:h-32 lg:h-40 object-cover rounded-lg mb-2 shadow-md">
                         <div class="font-Poppins text-2xl md:text-3xl font-bold text-bubble_blue mb-1">
                             12<span class="text-base md:text-lg">月</span>
@@ -500,8 +496,8 @@
 
                     <!-- 1-2月 -->
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/yearly-schedule-january.webp') }}" 
-                             alt="チーム開発キックオフ/チーム開発合宿" 
+                        <img src="{{ asset('images/yearly-schedule-january.webp') }}"
+                             alt="チーム開発キックオフ/チーム開発合宿"
                              class="w-full h-24 md:h-32 lg:h-40 object-cover rounded-lg mb-2 shadow-md">
                         <div class="font-Poppins text-2xl md:text-3xl font-bold text-bubble_blue mb-1">
                             1-2<span class="text-base md:text-lg">月</span>
@@ -512,8 +508,8 @@
 
                     <!-- 3月 -->
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/yearly-schedule-march.webp') }}" 
-                             alt="チーム開発予選、決勝" 
+                        <img src="{{ asset('images/yearly-schedule-march.webp') }}"
+                             alt="チーム開発予選、決勝"
                              class="w-full h-24 md:h-32 lg:h-40 object-cover rounded-lg mb-2 shadow-md">
                         <div class="font-Poppins text-2xl md:text-3xl font-bold text-bubble_blue mb-1">
                             3<span class="text-base md:text-lg">月</span>
@@ -523,8 +519,8 @@
 
                     <!-- 4月 -->
                     <div class="flex flex-col items-center text-center">
-                        <img src="{{ asset('images/yearly-schedule-april.webp') }}" 
-                             alt="新歓交流会/入学式/先輩引退式" 
+                        <img src="{{ asset('images/yearly-schedule-april.webp') }}"
+                             alt="新歓交流会/入学式/先輩引退式"
                              class="w-full h-24 md:h-32 lg:h-40 object-cover rounded-lg mb-2 shadow-md">
                         <div class="font-Poppins text-2xl md:text-3xl font-bold text-bubble_blue mb-1">
                             4<span class="text-base md:text-lg">月</span>
@@ -1091,8 +1087,8 @@
                                     <!-- Profile 1 -->
                                     <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
                                         <div class="flex items-start gap-4 mb-6">
-                                            <img src="{{ asset('images/weekly-schedule-icon-01.svg') }}" 
-                                                 class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover shadow-md" 
+                                            <img src="{{ asset('images/weekly-schedule-icon-01.svg') }}"
+                                                 class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover shadow-md"
                                                  alt="山田夏寧さんのプロフィール写真">
                                             <div class="flex-1">
                                                 <h3 class="font-Poppins text-lg md:text-xl font-bold text-black_light mb-2">
@@ -1114,15 +1110,15 @@
                                             </div>
                                             <p class="ml-auto font-Inter text-xs text-gray-600">1年度時点</p>
                                         </div>
-                                        <img src="{{ asset('images/weekly-schedule-01.png') }}" 
-                                             class="w-full h-auto rounded-lg shadow-md" 
+                                        <img src="{{ asset('images/weekly-schedule-01.png') }}"
+                                             class="w-full h-auto rounded-lg shadow-md"
                                              alt="山田夏寧さんの週間スケジュール">
                                     </div>
                                     <!-- Profile 2 -->
                                     <div class="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
                                         <div class="flex items-start gap-4 mb-6">
-                                            <img src="{{ asset('images/weekly-schedule-icon-02.svg') }}" 
-                                                 class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover shadow-md" 
+                                            <img src="{{ asset('images/weekly-schedule-icon-02.svg') }}"
+                                                 class="w-16 h-16 md:w-20 md:h-20 rounded-full object-cover shadow-md"
                                                  alt="小野媛乃さんのプロフィール写真">
                                             <div class="flex-1">
                                                 <h3 class="font-Poppins text-lg md:text-xl font-bold text-black_light mb-2">
@@ -1144,8 +1140,8 @@
                                             </div>
                                             <p class="ml-auto font-Inter text-xs text-gray-600">2年度時点</p>
                                         </div>
-                                        <img src="{{ asset('images/weekly-schedule-02.png') }}" 
-                                             class="w-full h-auto rounded-lg shadow-md" 
+                                        <img src="{{ asset('images/weekly-schedule-02.png') }}"
+                                             class="w-full h-auto rounded-lg shadow-md"
                                              alt="小野媛乃さんの週間スケジュール">
                                     </div>
                                 </div>
