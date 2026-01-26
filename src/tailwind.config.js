@@ -24,11 +24,15 @@ export default {
                 PlusJakartaSans: ['Plus Jakarta Sans', 'sans-serif'],
             },
             colors: {
-                primary_main: '#197fc3',       // 実際の色コードに変更してください
+                primary_main: '#197fc3',
                 primary_gray: '#B0B0B0',
                 primary_lighter: '#EAF2FF',
                 black_dark: '#1F1F1F',
                 black_light: '#3A3A3A',
+                bubble_blue: '#4A90E2',
+                light_blue: '#F0F8FF',
+                gray_light: '#E5E7EB',
+                gray_lighter: '#9CA3AF',
                 weekly_schedule_orange: '#FFA500',
                 border_gray: '#D1D5DB',
                 dot: '#E5E5E5',
